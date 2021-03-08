@@ -1,0 +1,114 @@
+<html>
+    <head>
+    <title>{% block title %}{% endblock title %} | BE Project</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    </head>
+    <style>
+        
+        header h1 {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+        }
+
+        
+        header {
+            padding: 40px;
+            background-color: rgb(2,214,140);
+            
+        }
+
+        .form{
+            margin: auto;
+            border:2px solid rgb(105, 175, 231);
+            border-radius: 5px;
+            width:40%;
+            margin-top: 1%;
+            margin-bottom: 10px;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+
+        .container-fluid{
+            padding:0px;
+        }
+        main{
+            min-height:calc(100vh - 211px - 58px);
+        }
+        body {
+            margin: 0px;
+            font-family: -apple-system;
+        }
+        .user{
+            
+            margin-top:10%;
+            margin-left:40%;
+        }
+        .user1{
+            margin-left:40%;
+            
+        }
+
+        nav {
+            background-color: rgb(25,25,38);
+            overflow: hidden;
+            
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 20px;
+            text-align: center;
+            float: left;
+            color: white;
+        }
+
+        footer {
+            {% comment %} background-color: #333; {% endcomment %}
+            background-color: rgb(25,25,38);
+            overflow: hidden;
+            
+        }
+
+        footer a {
+            text-decoration:none;
+            padding: 20px;
+            text-align: center;
+            float: left;
+            color: white;
+            
+        }
+    </style>
+    <body>
+        <header>
+            <h1>Brain Tumor Detection Software</h1>
+        </header>
+        
+        <nav>
+            <a href ="#">Home</a>
+            <a href ="#">Process</a>
+            <a href ="login.html">Login</a>
+            <a href ="SignUp.html">SignUp</a>
+
+        </nav>
+
+        <main>
+        
+            {% block main %}{% endblock main %}
+        </main>
+        {% block body %}{% endblock body %}
+        
+         <footer>
+            <a href="#">FAQ</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">&copy; 2021 | Brain Tumor Detection Software</a>
+        </footer>
+    </body>
+</html>
